@@ -80,14 +80,16 @@ function takeCommand(message) {
         let date=new Date().toLocaleString(undefined,{day:"numeric",month:"short"})
         speak(date)
     }
-    else{
+   else{
 
-        let searchQuery = message.replace("lyra", "").trim();
+    let searchQuery = message.replace("lyra", "").trim();
 
-        speak("Searching Google for " + searchQuery);
-         
-        window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`,"_blank"
-                    );
-    }
+    speak("Searching Google for " + searchQuery);
+
+    window.open(
+        `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`,
+        "_blank"
+    );
+}
 }
    
