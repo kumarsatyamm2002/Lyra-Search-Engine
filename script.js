@@ -86,7 +86,7 @@ function takeCommand(message) {
 
         speak("Searching Google for " + searchQuery);
          
-        window.open('https://www.google.com/search?q=${encodeURIComponent(searchQuery)}',"_blank"
+        window.open(`https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`,"_blank"
                     );
     }
 }
