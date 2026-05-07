@@ -83,12 +83,10 @@ function takeCommand(message) {
     else{
 
         let searchQuery = message.replace("lyra", "").trim();
-        
-        let finalText="This is what I found on internet regarding " + searchQuery;
-        
-        speak(finalText);
-        
-        window.open('https://www.google.com/search?q=${searchQuery}',"_blank"
+
+        speak("Searching Google for " + searchQuery);
+         
+        window.open('https://www.google.com/search?q=${encodeURIComponent(searchQuery)}',"_blank"
                     );
     }
 }
