@@ -91,4 +91,5 @@ function takeCommand(message) {
         window.open('https://www.google.com/search?q=${searchQuery}',"_blank"
                     );
     }
+}
    
