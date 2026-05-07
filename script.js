@@ -25,6 +25,10 @@ function wishMe() {
     }
 }
 
+window.addEventListener("load", () => {
+    wishMe();
+});
+
 // Speech Recognition Setup
 let speechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
 let recognition = new speechRecognition()
@@ -70,7 +74,7 @@ function takeCommand(message) {
     }
     else if (message.includes("open whatsapp")) {
         speak("opening whatsapp..")
-        window.open("whatsapp://")
+        window.open("https://web.whatsapp.com","_blank")
     }
     else if (message.includes("time")){
         let time=new Date().toLocaleString(undefined,{hour:"numeric",minute:"numeric"})
@@ -80,16 +84,16 @@ function takeCommand(message) {
         let date=new Date().toLocaleString(undefined,{day:"numeric",month:"short"})
         speak(date)
     }
-   else{
+  else {
 
     let searchQuery = message.replace("lyra", "").trim();
 
     speak("Searching Google for " + searchQuery);
 
-    window.open(
-        `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`,
-        "_blank"
-    );
+    let googleSearch =
+        `https://www.google.com/search?q=${encodeURIComponent(searchQuery)}`;
+
+    window.open(googleSearch, "_blank");
 }
 }
    
