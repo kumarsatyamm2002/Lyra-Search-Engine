@@ -1,1 +1,1 @@
- Lyra – AI Virtual Assistant
+ Lyra-Search-Engine
