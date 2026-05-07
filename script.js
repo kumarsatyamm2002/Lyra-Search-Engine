@@ -81,9 +81,14 @@ function takeCommand(message) {
         speak(date)
     }
     else{
-        let finalText="this is what i found on internet regarding" + message.replace("Lyra","") || message.replace("Lyra","")
-        speak(finalText)
-        window.open('https://www.google.com/search?q=${message.replace("Lyra","")}',"_blank")
-     }
+
+        let searchQuery = message.replace("lyra", "").trim();
+        
+        let finalText="This is what I found on internet regarding " + searchQuery;
+        
+        speak(finalText);
+        
+        window.open('https://www.google.com/search?q=${searchQuery}',"_blank"
+                    );
     }
    
