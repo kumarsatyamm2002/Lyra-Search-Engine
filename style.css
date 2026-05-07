@@ -17,9 +17,9 @@ body {
 #logo {
   width: 30vw;
 }
-#h1 {
+h1{
   font-family: 'Poppins', sans-serif;
-  color: aliceblue
+  color: aliceblue;
 }
 #name{
     color:rgb(255, 0, 204);
